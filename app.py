@@ -1,5 +1,5 @@
 #App
-    import streamlit as st
+import streamlit as st
 from pathlib import Path
 import io
 import csv
@@ -120,4 +120,5 @@ if evaluate:
                 ";".join(r.get("missing_skills", [])),
                 r.get("short_summary","")
             ])
+
         st.download_button("Download CSV Report", data=csv_buffer.getvalue(), file_name="resume_ranking.csv", mime="text/csv")
