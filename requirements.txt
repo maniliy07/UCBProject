@@ -1,9 +1,10 @@
 #requirements
 streamlit
 openai>=1.0.0
-tensorflow==1.15
+tensorflow==1.14
 PyPDF2
 agents
 fpdf
+
 
 
