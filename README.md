@@ -1,4 +1,4 @@
-# UCBProject
+#Capstone Project.
 
 **Problem Statement: Resume Evaluator for Requirements and Provide Score Using OpenAI and Generative AI**
 **Background**
