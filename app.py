@@ -10,7 +10,7 @@ from PyPDF2 import PdfReader
 from agents import extract_text_from_file, parse_resume_fields, call_openai_scorer, call_openai_explainer
 from utils import sanitize_text, chunk_text
 
-st.set_page_config(page_title="Smart Resume Screener - MultiAgent", layout="wide")
+st.set_page_config(page_title="Smart Resume Screener", layout="wide")
 
 if "OPENAI_API_KEY" not in st.secrets:
     st.error("Add OPENAI_API_KEY in Streamlit Secrets.")
@@ -122,3 +122,4 @@ if evaluate:
             ])
 
         st.download_button("Download CSV Report", data=csv_buffer.getvalue(), file_name="resume_ranking.csv", mime="text/csv")
+
