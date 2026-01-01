@@ -1,4 +1,9 @@
 **#Capstone Project.**
+https://github.com/maniliy07/UCBProject/blob/main/resume.ipynb
+https://github.com/maniliy07/UCBProject/blob/main/app.py
+https://github.com/maniliy07/UCBProject/blob/main/agents.py
+https://github.com/maniliy07/UCBProject/blob/main/utils.py
+https://github.com/maniliy07/UCBProject/blob/main/requirements.txt
 
 **Problem Statement: Resume Evaluator for Requirements and Provide Score Using OpenAI and Generative AI**
 **Background**
