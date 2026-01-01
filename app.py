@@ -1,26 +1,33 @@
-#App
-import streamlit as st
-from pathlib import Path
-import io
-import csv
-import re
-from typing import List, Tuple, Dict, Any
-from openai import OpenAI
-from PyPDF2 import PdfReader
-from agents import extract_text_from_file, parse_resume_fields, call_openai_scorer, call_openai_explainer
-from utils import sanitize_text, chunk_text
 
-st.set_page_config(page_title="Smart Resume Screener", layout="wide")
+  #Problem Statement: Resume Evaluator for Requirements and Provide Score Using OpenAI and Generative AI Background As the job market becomes increasingly competitive,
+    #  candidates often face challenges in tailoring their resumes to meet specific job requirements. Recruiters, inundated with applications,
+    #  struggle to efficiently evaluate resumes and identify the best candidates. Leveraging OpenAI's capabilities and Generative AI,
+    #  this project aims to develop a sophisticated resume evaluation tool that automatically assesses resumes against job descriptions,
+    #  scores them based on relevance, and provides actionable feedback for improvement.
 
-if "OPENAI_API_KEY" not in st.secrets:
-    st.error("Add OPENAI_API_KEY in Streamlit Secrets.")
+
+import streamlit as st # Streamlit for web app
+from pathlib import Path # Path for file paths
+import io # io for in-memory file handling
+import csv # csv for CSV operations
+import re # re for regex operations
+from typing import List, Tuple, Dict, Any # typing for type hints
+from openai import OpenAI # OpenAI for API calls
+from PyPDF2 import PdfReader # PyPDF2 for PDF reading
+from agents import extract_text_from_file, parse_resume_fields, call_openai_scorer, call_openai_explainer # custom agents
+from utils import sanitize_text, chunk_text # custom utilities
+
+st.set_page_config(page_title="Smart Resume Screener - MultiAgent", layout="wide") 
+
+if "OPENAI_API_KEY" not in st.secrets: # check for API key
+    st.error("Add OPENAI_API_KEY in Streamlit Secrets.") # show error
     st.stop()
 
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
-OPENAI_MODEL = st.secrets.get("OPENAI_MODEL", "gpt-4")
-client = OpenAI(api_key=OPENAI_API_KEY)
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"] # get API key
+OPENAI_MODEL = st.secrets.get("OPENAI_MODEL", "gpt-4") # get model or default to gpt-4
+client = OpenAI(api_key=OPENAI_API_KEY) # initialize OpenAI client
 
-st.title("Smart Resume Screener")
+st.title("Smart Resume Screener - MultiAgent") # app title
 col1, col2 = st.columns([3,1])
 with col1:
     jd_file = st.file_uploader("Upload Job Description (PDF/TXT)", type=["pdf","txt"], key="jd")
@@ -34,7 +41,7 @@ with col2:
 inbox_dir = Path(__file__).parent / "inbox_resumes"
 inbox_dir.mkdir(exist_ok=True)
 
-def read_uploaded(f):
+def read_uploaded(f): # read uploaded file
     if f is None:
         return ""
     name = getattr(f, "name", "")
@@ -53,8 +60,10 @@ def read_uploaded(f):
             return str(b)
         except Exception:
             return ""
+        
+ # 1.Evaluates Resumes: Analyzes uploaded resumes against the job description to score and rank candidates based on relevance and fit.       
 
-def run_evaluation(jd_text, resumes_data):
+def run_evaluation(jd_text, resumes_data):  # run the evaluation process
     results = []
     total = len(resumes_data)
     progress = st.progress(0)
@@ -79,6 +88,8 @@ def run_evaluation(jd_text, resumes_data):
         results.append(out)
         progress.progress(int(idx/total*100))
     return sorted(results, key=lambda x: int(x.get("match_score",0)), reverse=True)
+
+# 2.Evaluates Job Descriptions: Processes job descriptions to identify essential requirements and qualifications using advanced NLP techniques.
 
 if evaluate:
     jd_text = read_uploaded(jd_file) if jd_file else ""
@@ -120,7 +131,4 @@ if evaluate:
                 ";".join(r.get("missing_skills", [])),
                 r.get("short_summary","")
             ])
-
         st.download_button("Download CSV Report", data=csv_buffer.getvalue(), file_name="resume_ranking.csv", mime="text/csv")
-
-
