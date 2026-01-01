@@ -36,11 +36,8 @@ o	Clean and preprocess the text data using NLP techniques, including tokenizatio
 	Experiment with various scoring algorithms, considering both traditional machine learning methods and advanced AI techniques.
 4.	**Model Evaluation:**
 	Test the model's effectiveness using a separate validation dataset and evaluate it based on accuracy, precision, recall, and user satisfaction with feedback.
-5.	**User Interface Development**:
-6.	
-   https://resumeevl-app.streamlit.app/
-
-	Create an intuitive web application that allows users to interact with the resume evaluator seamlessly, displaying scores and feedback in an easily digestible format.
+5.	**User Interface Development**: https://resumeevl-app.streamlit.app/
+    Create an intuitive web application that allows users to interact with the resume evaluator seamlessly, displaying scores and feedback in an easily digestible format.
 6.**Expected Outcomes**
 •	A robust AI-driven resume evaluation tool that accurately scores resumes against job descriptions.
 •	Insights into common gaps in candidate resumes and personalized recommendations for improvement.
