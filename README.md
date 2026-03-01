@@ -1,5 +1,13 @@
 **#Capstone Project.**
+**Resume data Anaysis as per requirement of data anaysisy and choose for appropriate model**
 https://github.com/maniliy07/UCBProject/blob/main/resume.ipynb
+
+**Jupyter Notebook files**
+https://github.com/maniliy07/UCBProject/blob/main/app.ipynb
+https://github.com/maniliy07/UCBProject/blob/main/agents.ipynb
+https://github.com/maniliy07/UCBProject/blob/main/utils.ipynb
+
+**Converted notebook files to .py file format in order to use in Steamlit**
 https://github.com/maniliy07/UCBProject/blob/main/app.py
 https://github.com/maniliy07/UCBProject/blob/main/agents.py
 https://github.com/maniliy07/UCBProject/blob/main/utils.py
@@ -7,7 +15,7 @@ https://github.com/maniliy07/UCBProject/blob/main/requirements.txt
 
 **Problem Statement: Resume Evaluator for Requirements and Provide Score Using OpenAI and Generative AI**
 **Background**
-As the job market becomes increasingly competitive, candidates often face challenges in tailoring their resumes to meet specific job requirements. Recruiters, inundated with applications, struggle to efficiently evaluate resumes and identify the best candidates. Leveraging OpenAI's capabilities and Generative AI, this project aims to develop a sophisticated resume evaluation tool that automatically assesses resumes against job descriptions, scores them based on relevance, and provides actionable feedback for improvement.
+As the job market becomes increasingly competitive, candidates often face challenges in tailoring their resumes to meet specific job requirements. Recruiters, inundated with applications, struggle to efficiently evaluate resumes and identify the best candidates. Leveraging OpenAI's capabilities and Generative AI, this project aims to develop a sophisticated resume evaluation tool that** automatically assesses resumes against job descriptions**, scores them based on relevance, and provides actionable feedback for improvement.
 **Objective**
 The primary goal of this project is to create an AI-powered resume evaluator that: 
 1.	**Analyzes Resumes**: Utilizes OpenAI’s natural language processing capabilities to extract and analyze key information from resumes, such as skills, work experience, education, and  relevant keywords.
