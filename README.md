@@ -1,8 +1,6 @@
 **#Capstone Project.** 
 **Resume data Anaysis as per requirement of data anaysisy and choose for appropriate model**
 
- **Applicaiton URL :**  https://resumeevl-app.streamlit.app/
-
 **a) Resume data Analysis**
 https://github.com/maniliy07/UCBProject/blob/main/resume.ipynb
 
@@ -58,3 +56,12 @@ o	Clean and preprocess the text data using NLP techniques, including tokenizatio
 •	An enhanced user experience for both job seekers and recruiters, streamlining the hiring process.
 7.**Conclusion**
 By utilizing OpenAI and Generative AI techniques, this capstone project aims to revolutionize the way resumes are evaluated and improve the job application process for candidates. The combination of automated scoring and personalized feedback will empower job seekers to present their qualifications more effectively and increase their chances of securing interviews.
+
+**Steps to test the APP:**
+1. Downlaod the JD_docs.txt, Resume_1 , Resume_2 file attached.
+2. Upload the files to APP after click on the **Applicaiton URL :**  https://resumeevl-app.streamlit.app/
+3. Click on the Browse and upload the JD file .
+4. Click on Resume Uplaod attached both the resumes files
+5. Set the token to **200** using slider
+6. Click on the Evalute buton.
+7. Download the scored in CSV format.
