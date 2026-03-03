@@ -1,4 +1,4 @@
-**#Capstone Project.**
+**#Capstone Project.**  **Applicaiton URL :**  https://resumeevl-app.streamlit.app/
 **Resume data Anaysis as per requirement of data anaysisy and choose for appropriate model**
 
 **a) Resume data Analysis**
