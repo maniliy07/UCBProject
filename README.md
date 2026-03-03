@@ -56,3 +56,6 @@ o	Clean and preprocess the text data using NLP techniques, including tokenizatio
 •	An enhanced user experience for both job seekers and recruiters, streamlining the hiring process.
 7.**Conclusion**
 By utilizing OpenAI and Generative AI techniques, this capstone project aims to revolutionize the way resumes are evaluated and improve the job application process for candidates. The combination of automated scoring and personalized feedback will empower job seekers to present their qualifications more effectively and increase their chances of securing interviews.
+
+<img width="1817" height="428" alt="image" src="https://github.com/user-attachments/assets/bca2331e-eb7c-4728-a639-7332045c7cdd" />
+
