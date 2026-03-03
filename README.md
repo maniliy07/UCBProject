@@ -1,6 +1,6 @@
 **#Capstone Project.**
 **Resume data Anaysis as per requirement of data anaysisy and choose for appropriate model**
-** a) Resume data Analysis **
+**a) Resume data Analysis**
 https://github.com/maniliy07/UCBProject/blob/main/resume.ipynb
 
 **Jupyter Notebook files**
@@ -8,7 +8,7 @@ https://github.com/maniliy07/UCBProject/blob/main/app.ipynb
 https://github.com/maniliy07/UCBProject/blob/main/agents.ipynb
 https://github.com/maniliy07/UCBProject/blob/main/utils.ipynb
 
-**b) Evaluator for Requirements and Provide Score Using OpenAI and Generative AI**
+**b)Evaluator for Requirements and Provide Score Using OpenAI and Generative AI**
 **Converted notebook files to .py file format in order to use in Steamlit**
 https://github.com/maniliy07/UCBProject/blob/main/app.py
 https://github.com/maniliy07/UCBProject/blob/main/agents.py
